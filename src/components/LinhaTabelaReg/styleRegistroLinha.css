@@ -1,0 +1,26 @@
+
+
+.linhasListaExames tr{
+    padding: 0.75rem 1.5rem;   
+}
+
+.linhasListaExames tr td{
+    border: none;
+    border-radius: 5px;
+    padding: .2rem .9rem;
+    text-align: center;
+}
+
+.linhasListaExames tr:nth-child(odd) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(169 169 169 / var(--tw-bg-opacity));
+  }
+
+.linhasListaExames tr:nth-child(even) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(102 102 102 / var(--tw-bg-opacity));
+  }
+
+.linhasListaExames tr:hover{
+    background-color: white;
+}

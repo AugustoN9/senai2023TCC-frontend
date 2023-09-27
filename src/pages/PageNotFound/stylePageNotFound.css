@@ -1,0 +1,31 @@
+fundo{
+    width: 80%;
+    height: 100vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-image: url("../../assets/BackgroundPageNotFound.png");
+    background-color: #a2c3e2;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   
+}
+
+.fundo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #a2c3e2;
+}
+
+.fundo img{
+    width: 70%;
+}
+
+
+

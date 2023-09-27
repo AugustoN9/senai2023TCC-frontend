@@ -1,0 +1,23 @@
+.listaExames{
+    display: flex;
+    justify-content:first baseline;
+    align-items:first baseline;
+    width: 90%;
+    height: auto;
+    padding: 3rem 0;
+}
+
+.tabelaListaExames{
+    overflow: hidden; 
+    border-width: 2px; 
+    margin-left: 5%;
+}
+
+.cabecalhoListaExames tr th{
+    padding: 0.5rem 1.5rem;
+    background-color: #e32636;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+

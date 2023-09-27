@@ -1,0 +1,23 @@
+
+.solicitacaoTela{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+}
+
+cabecalhoUserExterno{
+    width: 100%;
+    height: 15%;
+}
+
+formConteudo{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    color: #ffffff;
+}
+
