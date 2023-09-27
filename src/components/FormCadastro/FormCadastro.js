@@ -74,7 +74,7 @@ const FormCadastro = () => {
         <Button type="submit" variant="contained">
           Cadastrar
         </Button>
-        <ButtonBack />
+        
       </form>
     </Container>
   );
