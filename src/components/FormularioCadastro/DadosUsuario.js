@@ -51,9 +51,9 @@ const DadosUsuario = () => {
         margin="normal"
         fullWidth
       />
-       <Button type="submit" variant="contained">
+       <button type="submit" variant="contained">
           Cadastrar
-        </Button>
+        </button>
         
     </form>
   );
