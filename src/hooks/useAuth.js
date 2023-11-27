@@ -17,36 +17,32 @@ const useAuth = () => {
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     console.log(`Dados do UserInfo`, userInfo);
-    if (userInfo) {
+    if (userInfo) {      
       api.defaults.headers.common["Authorization"] = `Bearer ${userInfo.token}`;
-      const dadosUserLog = findUserById(userInfo.id);
-      console.log(dadosUserLog);
+
+      findUserById(userInfo.id);
+      console.log("linha 27 useAuth",userInfo.id);
+     
       setUserLogged(true);
     }
     //se user logado, loading volta para false
     setLoading(false);
-  }, []);
+  },[]);
 
   const loginUser = async (inputValues) => {
     //uso a api para login
     const response = await loginUserApi(inputValues);
     const data = response.data;
 
-    console.log("Resposta da API", data.token)
-    if(data.token == null){
-      console.log("Resposta back: Erro no login");
-    }
-
     localStorage.setItem("userInfo", JSON.stringify(data));
     api.defaults.headers.common[
       "Authorization"
     ] = `Bearer ${response.data.token}`;
       
-
-    setUserFull(data);
-
     setUserLogged(true);
-    navigate("/HomeUsuarioExt");
+       
+    navigate("/Workspace1");
+    
   };
 
   // Funcao logout
@@ -57,10 +53,10 @@ const useAuth = () => {
     navigate("/");
   };
 
-  const findUserById = async (idUser) => {
+  const findUserById = async(idUser) => {
     const response = await getUserById(idUser);
     setUserFull(response.data);
-    console.log(userFull);
+    console.log(response.data)
   };
 
   return { userLogged, userFull, loading, loginUser, logoutUser };

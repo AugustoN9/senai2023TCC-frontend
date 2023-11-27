@@ -5,9 +5,7 @@ import logo from '../../assets/LogoExactapatho2.png';
 import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
-  const { userLogged, userFull,  logoutUser }  = useContext( AuthContext );
-
-  console.log(`Valor do context Navbar`,userLogged);
+  const { userLogged, userFull, logoutUser }  = useContext( AuthContext );
 
   return (
     <header className="cabecalho">
@@ -16,10 +14,11 @@ const Navbar = () => {
         {userLogged? (
           <div className="info_nav">
             <div className="usuarioLogado">
-              <p>{userFull.email}</p>
+              <p>{userFull.nome}</p>             
             </div>
             <div className="botoes">
-            <button className="btn"><Link to="/hometeste">Seu Workspace</Link></button>
+              <button className="btn"><Link to="/Admin">Dashboard</Link></button>
+              <button className="btn"><Link to="/workspace1">Workspace</Link></button>
               <button className="btn" onClick={ logoutUser }>Sair</button>
             </div>
         </div>
@@ -27,7 +26,7 @@ const Navbar = () => {
           <div className="botoes">
             <button className="btn">Voltar</button>
             <button className="btn"><Link to="/login">Entrar</Link></button>
-            <button className="btn"><Link to="/cadastro">Criar Conta</Link></button>
+            <button className="btn"><Link to="/register">Criar Conta</Link></button>
           </div>
         )}
         

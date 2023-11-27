@@ -20,10 +20,12 @@ const Tabela2 = () => {
             <th>Paciente</th>
             <th>Material</th>
             <th>Recipiente(s)</th>
+            <th>Origem</th>
             <th>Realizado</th>
             <th>cpf</th>
-            <th>idade</th>
-            <th>genero</th>
+            <th>Data de Nascimento</th>
+            <th>Genero</th>
+            <th>Descrição</th>
             <th>Solicitar</th>
           </tr>
         </thead>

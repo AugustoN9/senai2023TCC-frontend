@@ -1,21 +1,30 @@
-import api from './api';
+import api from "./api";
 
-const loginUserApi = (userValues) => 
-  api.post('/auth/login',userValues)
+const loginUserApi = (userValues) =>
+  api
+    .post("/auth/login", userValues)
     .then((response) => response)
-    .catch((er) => console.log(err));
+    .catch((err) => console.error("Erro na chamada", err));
 
 const registerUser = (addUserValues) =>
-  api.post('/usuario/create', addUserValues)
+  api
+    .post("/usuario/create", addUserValues)
     .then((response) => response)
-    .catch((er) => console.log(err));
+    .catch((err) => console.error("Erro na chamada", err));
 
-const getUserById = (idUser) =>{
-  console.log(idUser);
-
-  return api.get(`/usuario/findById/${idUser}`)
+ 
+const getUfindAllUserApi = () => 
+   api
+    .get(`/usuario/findAll/`)
     .then((response) => response)
-    .catch((er) => console.log(err));
-}
+    .catch((err) =>  err)
 
-export { loginUserApi, registerUser, getUserById }
+const getUserById = (idUser) => 
+   api
+    .get(`/usuario/findById/${idUser}`)
+    .then((response) => response)
+    .catch((err) =>  err)
+
+
+
+export { loginUserApi, registerUser, getUserById, getUfindAllUserApi  };

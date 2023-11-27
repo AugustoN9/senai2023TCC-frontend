@@ -1,6 +1,7 @@
 import React, { createContext } from 'react';
 import useAuth from '../hooks/useAuth';
 
+
 //funcao para init o contexto
 const AuthContext = createContext();
 
@@ -14,7 +15,7 @@ const AuthProvider = ({ children }) => {
     }
 
     return (
-        <AuthContext.Provider value={ {userLogged, userFull, loginUser, logoutUser } }>
+        <AuthContext.Provider value={ {userLogged, userFull, loginUser, logoutUser }  }>
             { children }
         </AuthContext.Provider>
     )

@@ -1,10 +1,8 @@
 import React from 'react';
-import './styleFormulario.css'
-import DadosPessoais from '../../components/FormularioCadastro/DadosPessoais';
-import DadosUsuario from '../../components/FormularioCadastro/DadosUsuario';
+import './styleFormulario.css';
 import logo from "../../assets/LogoExactapatho2.png";
-import FormularioCadastro from '../../components/FormularioCadastro/FormularioCadastro';
 import { Link } from 'react-router-dom';
+import FormularioCadastro from '../../components/FormularioCadastro/FormularioCadastro';
 
 
 const Formulario = () => {  
@@ -19,6 +17,7 @@ const Formulario = () => {
         <Link to="/">Voltar</Link>    
         <h1>Cadastro</h1>
         <FormularioCadastro />
+        
       </section>      
     </main>
   )

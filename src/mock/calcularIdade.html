@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Idade JS</title>
+
+</head>
+
+<body>
+    <input type="date" id="dtnascimento" required>
+    <button onclick="Idade();">Calcular Idade</button>
+
+    <script>
+        function Idade() {
+            var hoje = new Date();
+            console.log('Hoje', hoje.toISOString().split('T')[0])
+            var dataHoje = hoje.toISOString().split('T')[0]
+            console.log(dataHoje)
+
+            var inputDN = document.querySelector("#dtnascimento").value;
+            console.log(new Date(dataHoje.getFullYear()))
+
+            var diferencaAnos = hoje.getFullYear() - inputDN.getFullYear();
+            if (new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate()) <
+                new Date(hoje.getFullYear(), inputDN.getMonth(), inputDN.getDate()))
+                diferencaAnos--;
+            alert(diferencaAnos);
+            console.log(diferencaAnos)
+        }
+
+    </script>
+
+    <script>
+        function calculaIdade(dataNasc) {
+            var dataAtual = new Date();
+            var anoAtual = dataAtual.getFullYear();
+            var anoNascParts = dataNasc.split('/');
+            var diaNasc = anoNascParts[0];
+            var mesNasc = anoNascParts[1];
+            var anoNasc = anoNascParts[2];
+            var idade = anoAtual - anoNasc;
+            var mesAtual = dataAtual.getMonth() + 1;
+            //Se mes atual for menor que o nascimento, nao fez aniversario ainda;  
+            if (mesAtual < mesNasc) {
+                idade--;
+            } else {
+                //Se estiver no mes do nascimento, verificar o dia
+                if (mesAtual == mesNasc) {
+                    if (new Date().getDate() < diaNasc) {
+                        //Se a data atual for menor que o dia de nascimento ele ainda nao fez aniversario
+                        idade--;
+                    }
+                }
+            }
+            return idade;
+        }
+        console.log(calculaIdade('6/4/2015'));
+
+
+    </script>
+
+
+</body>
+
+</html>

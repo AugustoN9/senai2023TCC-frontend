@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,11 +12,14 @@ const CustomizedTables = () => {
 
   const [usuarios, setUsuarios] = useState([]);   
   
-  useEffect(async () => {
-    const response = await api.get('/authService/findAllUserApi');
-    console.log(response.data)
-    setUsuarios(response.data)
-  }, []);
+  // useEffect(async () => {
+  //   const response =  api.get('/authService/findAllUserApi');
+  //   console.log("Resposta da api",response.data)
+  //   setUsuarios("Valor do setUsuarioos", response.data)
+
+  // }, []);
+
+  console.log("Valor de Usuarios", usuarios)
 
   const pacientes = [
     {id:1, nome:'Arnaldo', datanasc:'16/08/1965', peso:72,altura:1.73},
@@ -39,18 +42,18 @@ const CustomizedTables = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {usuarios.map((usuario) => (
+        {pacientes.map((paciente) => (
           <TableRow
-            key={usuario.id}
+            key={paciente.id}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
           >
-            <TableCell component="th" scope="usuario">
-              {usuario.id}
+            <TableCell component="th" scope="paciente">
+              {paciente.id}
             </TableCell>
-            <TableCell align="right">{usuario.nome}</TableCell>
-            <TableCell align="right">{usuario.email}</TableCell>
-            <TableCell align="right">{usuario.tipo}</TableCell>
-            <TableCell align="right">{usuario.ativo}</TableCell>
+            <TableCell align="right">{paciente.nome}</TableCell>
+            <TableCell align="right">{paciente.email}</TableCell>
+            <TableCell align="right">{paciente.tipo}</TableCell>
+            <TableCell align="right">{paciente.ativo}</TableCell>
           </TableRow>
         ))}
       </TableBody>

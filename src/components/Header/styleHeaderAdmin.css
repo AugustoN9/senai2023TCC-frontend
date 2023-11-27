@@ -1,0 +1,12 @@
+.cabecalhoAdmin{
+    margin-top: 0;
+    padding: 0;
+    height: 150px;
+    text-align: center;
+    background-color: teal;
+}
+
+h1{
+    padding-top: 20px;
+    color: #fff;
+}

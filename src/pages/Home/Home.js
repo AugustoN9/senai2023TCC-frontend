@@ -1,20 +1,16 @@
-import React, { useContext } from "react";
-import Banner from "../../components/Banner/Banner";
-import Navbar from "../../components/Navbar/Navbar";
+import React from "react";
 import "./styleHome.css";
-import { AuthContext } from "../../context/AuthContext";
+import NavbarHome from "../../components/NavbarHome/NavbarHome";
+import Banner from "../../components/Banner/Banner";
 
-const Home = () => {
-
-  const userLogged = useContext(AuthContext);
-  console.log(`Valor do context Home`, userLogged);
+const home = () => {
 
   return (
     <div>
-      <Navbar />
+      <NavbarHome />
       <Banner />
     </div>
   );
 };
 
-export default Home;
+export default home;

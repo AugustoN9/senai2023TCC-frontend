@@ -5,7 +5,7 @@ import "./styleRegistroLinha.css";
 import { Link } from 'react-router-dom';
 import { BiLinkExternal } from "react-icons/bi";
 
-const RegistroLinha = ({ id, nome, material, quantidade, data_procedimento, cpf, data_nasc, genero }) => {
+const RegistroLinha = ({ id, nome, material, quantidade, origem, data_procedimento, cpf, data_nasc, genero, descricao }) => {
   return (
    <>
         <tbody className="linhasListaExames">          
@@ -14,10 +14,12 @@ const RegistroLinha = ({ id, nome, material, quantidade, data_procedimento, cpf,
             <td>{nome}</td>
             <td>{material}</td>
             <td>{quantidade}</td>
+            <td>{origem}</td>
             <td>{data_procedimento}</td>
             <td>{cpf}</td>
             <td>{data_nasc}</td>
             <td>{genero}</td>
+            <td>{descricao}</td>
             <td>
               <Link to={`/solicitacao/${id}`}>
                 <BiLinkExternal />

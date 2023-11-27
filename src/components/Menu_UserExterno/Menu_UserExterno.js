@@ -17,9 +17,9 @@ const Menu_UserExterno = () => {
             <div className="usuarioLogado">
               <p>{userFull.email}</p>
             </div>
-            <div className="botoes">
+            <div className="botoes">              
               <button className="btn">
-                <Link to="/HomeUsuarioExt">Voltar</Link>
+                <Link to="/workspace1">Voltar</Link>
               </button>
               <button className="btn" onClick={logoutUser}>
                 Sair

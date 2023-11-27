@@ -1,0 +1,23 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    width: 11rem; 
+    color: navy; 
+    background: white;   
+    border-radius: 9px; 
+}
+
+.card h2{
+    font-size: 1.2rem;
+}
+
+.card p{
+    font-size: 3rem;
+}
+
+.card img{
+    width: 70%;
+}

@@ -4,49 +4,71 @@
         "nome": "Maria Dias de Sa",
         "material": "apêndice cecal",
         "quantidade": "1",
+        "origem": "bloco cirurgico",
         "data_procedimento": "10/08/2023",
         "cpf": "886.805.330.-68",
-        "data_nasc": "10/02/80",
-        "genero": "feminino"
+        "data_nasc": "10/02/1980",
+        "genero": "feminino",
+        "descricao": "Dor abdominal"
     },
     {
         "id": 2,
         "nome": "Pamela Henrique Lima",
         "material": "Vesicula Biliar",
         "quantidade": "2",
+        "origem": "bloco cirurgico",
         "data_procedimento": "10/08/2023",
         "cpf": "886.805.330.-68",
-        "data_nasc": "10/02/80",
-        "genero": "feminino"
+        "data_nasc": "10/02/1975",
+        "genero": "feminino",
+        "descricao": "Dor abdominal intensa"
     },
     {
         "id": 3,
         "nome": "João Pedro Demostenes",
         "material": "apêndice cecal",
         "quantidade": "2",
+        "origem": "bloco cirurgico",
         "data_procedimento": "10/08/2023",
         "cpf": "886.805.330.-68",
-        "data_nasc": "10/02/80",
-        "genero": "masculino"
+        "data_nasc": "13/02/1970",
+        "genero": "masculino",
+        "descricao": "Dor abdominal"
     },
     {
         "id": 4,
         "nome": "Diego dos Santos",
         "material": "Biopsia Gastrica",
         "quantidade": "3",
+        "origem": "endoscopia",
         "data_procedimento": "10/08/2023",
         "cpf": "886.805.330.-68",
-        "data_nasc": "10/02/80",
-        "genero": "masculino"
+        "data_nasc": "02/12/1981",
+        "genero": "masculino",
+        "descricao": "Gastrite crônica"
     },
     {
         "id": 5,
         "nome": "Carlos Benicio John",
         "material": "apêndice cecal",
         "quantidade": "1",
+        "origem": "bloco cirurgico",
         "data_procedimento": "10/08/2023",
         "cpf": "886.805.330.-68",
-        "data_nasc": "10/02/80",
-        "genero": "masculino"
+        "data_nasc": "10/08/1977",
+        "genero": "masculino",
+        "descricao": ""
+    },
+    {
+        "id": 6,
+        "nome": "Gilherme Kustillen Jamp",
+        "material": "Biopsia Prostata",
+        "quantidade": "6",
+        "origem": "urologia",
+        "data_procedimento": "18/09/2023",
+        "cpf": "886.805.330.-68",
+        "data_nasc": "02/12/1981",
+        "genero": "masculino",
+        "descricao": "Dor "
     }
 ]
